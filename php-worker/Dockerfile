@@ -36,6 +36,9 @@ RUN apk --update add wget \
   libressl-dev \
   supervisor
 
+RUN apk add --update nodejs
+
+RUN apk add --update npm
 
 RUN pecl channel-update pecl.php.net; \
   docker-php-ext-install mysqli mbstring pdo pdo_mysql xml pcntl; \
